@@ -3,11 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net7.0</TargetFramework>
-  </PropertyGroup>
-  
-  <ItemGroup>
-    <Folder Include="jsreport\data" />
-  </ItemGroup>  
+  </PropertyGroup>  
 
   <ItemGroup>
     <None Update="jsreport\**\*.*">

@@ -1,0 +1,373 @@
+html, body {
+    background-color: white;
+    font-family: LatoWebLight, Lato, Arial, Helvetica, sans-serif;
+}
+
+.date_generated {
+    position: absolute;
+    top: 12px;
+    width: 100%;
+    text-align: center;
+}
+
+h2 {
+    font-family: LatoWebLight, Lato, Arial, Helvetica, sans-serif;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+div.certificate_signature {
+    width: 83%;
+    height: 70px;
+    position: absolute;
+    margin-left: 50px;
+    top: -40px;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.certificate-page {
+    text-align: center;
+}
+
+p {
+    background: inherit;
+    width: 80%;
+    min-width: 300px;
+    margin: 0 auto;
+    font-size: .8rem;
+    color: black;
+    margin-bottom: -6px;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.description {
+    float: left;
+}
+
+.description-content-complete {
+    background: url('images/check.png') no-repeat left;
+    position: absolute;
+    float: right;
+    text-align: left;
+    padding-left: 25px;
+    right: 20%;
+}
+
+.description-content-incomplete {
+    background: url('images/x.png') no-repeat left;
+    position: absolute;
+    float: right;
+    text-align: left;
+    padding-left: 25px;
+    right: 20%;
+}
+
+div.topic-list {
+    padding-bottom: 45px;
+    margin-top: 20px;
+}
+
+    div.topic-list p.items {
+        word-break: break-word;
+        white-space: normal;
+        text-align: left;
+    }
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+div.default_certificate_banner {
+    margin-right: 40px;
+    margin-top: 0px;
+    width: 100%;
+    height: 44px;
+    border-radius: 5px;
+    z-index: 1000;
+    text-align: center;
+}
+
+h3.course_name {
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+h2.lms_name {
+    color: black;
+    font-family: LatoWebLight, Lato, Arial, Helvetica, sans-serif;
+    margin-top: 15px;
+}
+
+span.status_text {
+    float: right;
+    margin-left: 10px;
+}
+
+span.unsatisfactory span.status_text {
+    margin-right: -107px;
+}
+
+span.status_text,
+span.description {
+    font-size: 1.2rem;
+}
+
+div.name_field,
+div.date_field {
+    height: 32px;
+    padding: 5px;
+    padding-left: 0px;
+    border-bottom: 1px solid #bbbbbb;
+    margin-bottom: 40px;
+    position: relative;
+    bottom: 0px;
+    text-align: left;
+    width: 40%;
+}
+
+div.name_field {
+    margin-left: 10%;
+}
+
+div.date_field {
+    margin-right: 10%;
+    margin-left: 50px;
+}
+
+h2.lms_name,
+div.header_content {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+    div.header_content h2 {
+        color: #646464;
+    }
+
+h2, h5, p {
+    font-family: LatoWebLight, Lato, Arial, Helvetica, sans-serif;
+}
+
+    h5.start_date {
+        margin-top: 20px;
+    }
+
+    h5.certifies_statement {
+        margin-bottom: 20px;
+        margin-top: 20px;
+        font-size: 1.2rem;
+    }
+
+div.outer_box {
+    border: 7px solid #e0e0e0;
+    background-color: transparent;
+    position: relative;
+    z-index: 0;
+}
+
+div.inner_box_one {
+    border: 1px solid #e0e0e0;
+    margin: 31px 15px;
+}
+
+div.inner_box_two {
+    border: 1px solid #e0e0e0;
+    margin: -17px 15px;
+}
+
+div.inner_box_three {
+    border: 1px solid #e0e0e0;
+    margin: 7px -9px;
+}
+
+div.certificate_title {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    height: 42px;
+    top: 15px;
+    color: white;
+    padding-right: 20px;
+    font-family: LatoWebLight, Lato, Arial, Helvetica, sans-serif;
+}
+
+    div.certificate_title h3 {
+        font-size: 26px;
+        font-family: LatoWebLight, Lato, Arial, Helvetica, sans-serif;
+        color: white;
+    }
+
+div.name_field img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    max-height: 100%;
+}
+
+div.name_field label {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 12px;
+    text-align: right;
+    width: 100%;
+    margin: 0px;
+    margin-left: 4px;
+    display: block;
+    margin-bottom: 2px;
+}
+
+div.name_field h5 {
+    margin-bottom: 5px;
+}
+
+.certificate_text {
+    width: 80%;
+    white-space: normal;
+    padding: 0px;
+    margin: 40px 0px 5px 0px;
+    line-height: 20px;
+    text-align: center;
+    word-break: break-all;
+}
+
+.padding {
+    padding: 0px 40px;
+}
+
+div.user_info_container,
+div.name_and_date_container,
+div.user_info,
+div.user_info div.info_item,
+div.course_name_container {
+    clear: both;
+    display: flex;
+    justify-content: space-around;
+}
+
+div.course_name_container {
+    justify-content: center;
+}
+
+div.user_info {
+    border-top: 1px solid #d6c221;
+    border-bottom: 1px solid #d6c221;
+    width: 80%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+    div.user_info div.info_item {
+        margin-bottom: 5px;
+    }
+
+    div.user_info div.left :last-child,
+    div.user_info div.right :last-child {
+        margin-bottom: 0px;
+    }
+
+    div.user_info div.info_item label.left,
+    div.user_info div.info_item label.right {
+        width: 100%;
+        font-family: LatoWebLight, Lato, Arial, Helvetica, sans-serif;
+    }
+
+    div.user_info div.info_item label.left {
+        text-align: left;
+    }
+
+    div.user_info div.info_item label.right {
+        text-align: right;
+        word-break: break-word;
+    }
+
+    div.user_info div.left,
+    div.user_info div.right {
+        display: inline-block;
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 100%;
+    }
+
+    div.user_info div.left {
+        border-right: 1px solid #d6c221;
+    }
+
+div.provided_by_message {
+    font-size: 10px;
+    text-align: center;
+    position: relative;
+    top: -19px;
+}
+
+    div.provided_by_message label {
+        color: #858585;
+    }
+
+div.weird_symbol {
+    height: 20px;
+    width: 40px;
+    margin-top: 22px;
+}
+
+    div.weird_symbol img {
+        height: 60%;
+        width: 60%;
+    }
+
+div.certificate-content,
+h2.lms_name {
+    word-break: break-word;
+}
+
+img.dots {
+    display: block;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 10px;
+    height: 2px;
+}
+
+div.certificate_container {
+    background: none;
+    width: 100%;
+}
+
+.background_waves {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+}
+
+
+@media print {
+    .no-print, .no-print * {
+        display: none !important;
+    }
+
+    :host-context(body) {
+        overflow: visible;
+    }
+
+    span.small_font {
+        max-width: 75%;
+    }
+
+    div.provided_by_message label {
+        color: #858585;
+        -webkit-print-color-adjust: exact;
+    }
+
+    div.header_content h2 {
+        color: #646464;
+        -webkit-print-color-adjust: exact;
+    }
+}

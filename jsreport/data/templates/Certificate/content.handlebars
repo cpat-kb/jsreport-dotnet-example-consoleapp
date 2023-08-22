@@ -1,0 +1,153 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet">
+<style>
+    {
+        #asset Certificate styles.css @encoding=utf8
+    }
+</style>
+
+<div class="certificate_container">
+    <div class="outer_box">
+        <svg class="background_waves" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <pattern height="20" id="Pattern" patternUnits="userSpaceOnUse" width="250" x="0" y="0">
+                    <path d="
+                  M 0,9
+                  c 31.5,0 60,-20 125,-20
+                  65,0 93.5,20 125,20
+              " fill="none" stroke="#EDEDED" stroke-width="1"></path>
+                    <path d="
+                  M 0,19
+                  c 31.5,0 60,-20 125,-20
+                  65,0 93.5,20 125,20
+              " fill="none" stroke="#EDEDED" stroke-width="1"></path>
+                    <path d="
+                  M 0,29
+                  c 31.5,0 60,-20 125,-20
+                  65,0 93.5,20 125,20
+              " fill="none" stroke="#EDEDED" stroke-width="1"></path>
+                    <path d="
+                  M 0,39
+                  c 31.5,0 60,-20 125,-20
+                  65,0 93.5,20 125,20
+              " fill="none" stroke="#EDEDED" stroke-width="1"></path>
+                </pattern>
+            </defs>
+            <rect fill="url(#Pattern) #fff" height="100%" stroke="none" width="100%" />
+        </svg>
+        <div class="inner_box_one">
+            <div class="inner_box_two">
+                <div class="inner_box_three">
+                    <div id="page-certificate" class="certificate-page">
+                        <div id="certificate">
+                            <div class="certificate-content">
+                                <h2 class="lms_name">{{certificateJSON.titleInfoSection.lmsName}}</h2>
+                                {{#if certificate}}{{!--<ng-container *ngIf="certificate.items.length > 0">--}}
+                                {{!--#if courseKey_spliced--}}
+                                <div class="header_content">
+                                    <h2>Certification of {{#if certificate.certificateTypeName}}{{certificate.certificateTypeName}}{{else}}Course{{/if}} Completion</h2>
+                                    <div class="course_name_container">
+                                        <div class="weird_symbol"><img src="https://cpatcourseware.blob.core.windows.net/themes/certificate/default/images/Flourish.png" /></div>
+                                        <h3 class="course_name">{{certificate.versionName}}</h3>
+                                        <div class="weird_symbol"><img src="https://cpatcourseware.blob.core.windows.net/themes/certificate/default/images/Flourish.png" /></div>
+                                    </div>
+                                    <h5 class="certifies_statement">This certifies <strong>{{certificate.name}}</strong> has completed the subjects outlined as of <strong>{{casualDate certificate.lessonCompletionInstant}}.</strong></h5>
+                                </div>
+                                <div class="user_info_container">
+                                    <div class="user_info">
+                                        <div class="left">
+                                            <div class="info_item">
+                                                <label class="left">Employee ID</label>
+                                                <label class="right">{{emptyValue certificate.employeeID}}</label>
+                                            </div>
+                                            <div class="info_item">
+                                                <label class="left">Base</label>
+                                                <label class="right">{{emptyValue certificate.base}}</label>
+                                            </div>
+                                            <div class="info_item">
+                                                <label class="left">Position</label>
+                                                <label class="right">{{emptyValue certificate.position}}</label>
+                                            </div>
+                                            <div class="info_item">
+                                                <label class="left">Fleet</label>
+                                                <label class="right">{{emptyValue certificate.fleet}}</label>
+                                            </div>
+                                        </div>
+                                        <div class="right">
+                                            <div class="info_item">
+                                                <label class="left">Time</label>
+                                                <label class="right" ">{{emptyValue (millisecondsToTime certificate.courseTotalTime)}}</label>
+                                            </div>
+                                            <div class="info_item">
+                                                <label class="left">Score</label>
+                                                <label class="right">{{emptyValue (displayScore certificate.lessonScore)}}</label>
+                                            </div>
+                                            <div class="info_item">
+                                                <label class="left">Date Started</label>
+                                                <label class="right">{{emptyValue (casualDate certificate.lessonStartInstant)}}</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="topic-list">
+                                    {{#if certificate}}
+                                    {{!--#each certificate--}}
+                                    <div>
+                                        <p class="items">
+                                            <span class="description">{{certificate.versionName}}</span>
+                                            {{#unless certificate.lessonCompletion}}
+                                            <span class="unsatisfactory">
+                                                {{/unless}}
+                                                {{#if certificateJSON.assignmentListSection.showAssignmentListTime}}
+                                                <span class="status_text">{{millisecondsToTime certificate.courseTotalTime}}</span>
+                                                {{/if}}
+                                                {{#unless item.lessonCompletion}}
+                                            </span>
+                                            {{/unless}}
+                                        </p>
+                                        <img class="dots" src="https://cpatcourseware.blob.core.windows.net/themes/certificate/default/images/dots.svg">
+                                    </div>
+                                    {{!--/each--}}
+                                    {{/if}}
+                                    {{#if certificateJSON.certificateTextSection.showCertificateText}}
+                                    <p class="certificate_text">{{certificateJSON.certificateTextSection.certificateText}}</p>
+                                    {{/if}}
+                                </div>
+                                {{!--/if--}} {{!--</ng-container>--}}
+                                {{/if}} {{!--</ng-container>--}}
+                            </div>
+                            <div class="name_and_date_container">
+                                <div class="name_field">
+                                    {{#if certificateJSON.signatureSection.showSignature}}
+                                    <div class="certificate_signature">
+                                        <img src="{{certificateJSON.signatureSection.signatureURL}}" />
+                                    </div>
+                                    {{/if}}
+                                    <h5>Name</h5>
+                                    {{#if certificateJSON.signatureSection.showPrintedName}}
+                                    <label>
+                                        {{certificateJSON.signatureSection.printedName}}
+                                    </label>
+                                    {{/if}}
+                                    {{#if certificateJSON.signatureSection.showJobTitle}}
+                                    <label>
+                                        {{certificateJSON.signatureSection.jobTitle}}
+                                    </label>
+                                    {{/if}}
+                                </div>
+                                <div class="date_field">
+                                    <div class="date_generated">{{casualDate currentTime}}</div>
+                                    <h5>Date</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- .inner_box_three -->
+            </div> <!-- .inner_box_two -->
+        </div> <!-- .inner_box_one -->
+    </div> <!-- .outer_box -->
+    <div class="provided_by_message">
+        <label>Training provided by CPaT Global LLC</label>
+    </div>
+</div>
