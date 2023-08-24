@@ -1,6 +1,9 @@
 {
     "shortid": "rkJTnK2cf",
     "recipe": "chrome-pdf",
+    "chrome": {
+        "landscape":  true
+    },
     "engine": "handlebars",
     "data": {
         "shortid": "Sy5S19nch"

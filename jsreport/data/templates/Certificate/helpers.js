@@ -58,9 +58,27 @@ function displayScore(score) {
     return display;
 }
 
-function casualDate(numberDate) {
-    if (numberDate) {
-        return this.dateFormatter.casualDate(numberDate);
+function casualDate(rawDate) {
+    if (rawDate) {
+        if (rawDate.toString() == "0") {
+            return "N/A";
+        } else if (rawDate.toString() == "N/A") {
+            return "N/A";
+        } else {
+            var returnNewDate = (new Date(rawDate)).toLocaleDateString(undefined,
+                {
+                    timeZone: "UTC",
+                    month: 'long',
+                    day: 'numeric',
+                    year: 'numeric'
+                }
+            );
+            return returnNewDate;
+        }
     }
     return "-";
+}
+
+function casualCurrentTime() {
+    return casualDate(Date.now());
 }

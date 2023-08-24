@@ -20,14 +20,14 @@ namespace ConsoleApp
                 .Configure(cfg => cfg.DoTrustUserCode().FileSystemStore().BaseUrlAsWorkingDirectory())
                 .AsUtility()
                 .Create();
-
+            
             Console.WriteLine("Rendering localy stored template jsreport/data/templates/Invoice into invoice.pdf");
             var invoiceReport = rs.RenderByNameAsync("Invoice", InvoiceData).Result;
             invoiceReport.Content.CopyTo(File.OpenWrite("invoice.pdf"));
 
-            Console.WriteLine("Rendering localy stored template jsreport/data/templates/Invoice into invoice.pdf");
+            Console.WriteLine("Rendering localy stored template jsreport/data/templates/Certificate into certificate.pdf");
             var certificateReport = rs.RenderByNameAsync("Certificate", CertificateData).Result;
-            invoiceReport.Content.CopyTo(File.OpenWrite("certificate.pdf"));
+            certificateReport.Content.CopyTo(File.OpenWrite("certificate.pdf"));
 
             Console.WriteLine("Rendering custom report fully described through the request object into customReport.pdf");
             var customReport = rs.RenderAsync(CustomRenderRequest).Result;
